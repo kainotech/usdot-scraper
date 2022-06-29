@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 import numpy as np
 
 url = 'https://usdot411.com/user/search/advanced/list'
-range=[x for x in range(220000,500000,50)]
+range=[x for x in range(220000,300000,50)]
 results = []
 
 
@@ -45,8 +45,8 @@ def get_tasks(session,request_gaps):
                 'X-KEY': 'eyJpdiI6InVVc01BR3dvYm8xNmEyYko1NnYwTGc9PSIsInZhbHVlIjoiVXBpZDlCbThzdkNDWkcyVityU2UzMXUwaEpOV1o3MG13T0o3Q3o3U0xkdWFnVkdnSll0eHRaZGltV1QwRk1vdUhKVVBTbkkvcEZuV3IzN2VjSXA5OFBENVNCNUlIcHBFQThVbHd5TityRkM3ZURmUWpMWWF5RzU2R0cvTXdFd2M5bUtacVpWUVJBMTNISEM0OGN5bkhvczJDNnlucUJvYWpDaHV2ZS9FWnRZZExXdExHVkFWajFCZDRGU0JMeXl5SG56RmE2bVdtYlpMMFVrWnUydExXa2xRNVVpT1ZpUHhLT3VneXFtbFE4bFl2em1IOVpONlZySExnL0xJaThSVyIsIm1hYyI6IjI1NDI1YWEzZmUwMzRhNDdjODQ3MDhhNDA1YjZiMDBhYzJhMzRiYjU5OTk4YmUxN2NhMzg1OWU0ZDg0NTQ2ZDQifQ%3D%3D',
                 '_ga': 'GA1.1.1581905416.1655785741',
                 '__gads': 'ID=99f07c8c1a291d4d-2257f1a267d40030:T=1655785920:RT=1655785920:S=ALNI_MYlSRLddQtXSEyb4lHHQsOjsdUeUg',
-                '__gpi': 'UID=000006d14ebceca5:T=1655785920:RT=1656408940:S=ALNI_MZh0MOvwE_5nwCwuuuhUqb7KFLpkQ',
-                '_ga_2CX7JCZ1RS': 'GS1.1.1656412719.26.0.1656412719.0',
+                '__gpi': 'UID=000006d14ebceca5:T=1655785920:RT=1656496060:S=ALNI_MZh0MOvwE_5nwCwuuuhUqb7KFLpkQ',
+                '_ga_2CX7JCZ1RS': 'GS1.1.1656499787.32.1.1656499822.0',
             },
             data={
                 'state': '',
@@ -91,7 +91,7 @@ def get_usdot(html_string):
 
 
 print(f"request gap count in file : {len(range)}")
-range_splited=np.array_split(range, 100)
+range_splited=np.array_split(range, 4)
 
 start = time.time()
 api_calls=[]
